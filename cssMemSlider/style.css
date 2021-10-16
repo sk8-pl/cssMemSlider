@@ -1,0 +1,95 @@
+body {
+    background-color: rgb(61, 61, 61);
+}
+
+.wrapper {
+    max-width: 60em;
+    margin: 2em auto;
+}
+
+.slider_wrapper {
+    border-radius: 10px;
+}
+
+input {
+    display: none;
+}
+
+.inner {
+    border-radius: 10px;
+    width: 500%;
+    line-height: 0;
+}
+
+
+article {
+    border-radius: 10px;
+    width: 20%;
+    float: left;
+}
+
+article img {
+    width: 100%
+}
+
+.slider_dot {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+.slider_dot label {
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #bbb;
+    transition: all .3s;
+}
+
+.slider_dot label:hover {
+    background: rgb(4, 247, 65);
+}
+
+.slider_wrapper {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px rgb(32, 32, 32);
+    transition: all .5s ease-out;
+}
+
+.sign {
+    box-shadow: none;
+
+}
+
+.inner-sign article {
+    pointer-events: none;
+}
+
+.slider_wrapper .inner {
+    transition: all .8s cubic-bezier(.77, 0, .175, 1);
+}
+
+#slide1:checked~.slider_dot label:nth-child(1), #slide2:checked~.slider_dot label:nth-child(2), #slide3:checked~.slider_dot label:nth-child(3), #slide4:checked~.slider_dot label:nth-child(4) {
+    background: rgb(238, 22, 22);
+}
+
+#slide2:checked~.slider_wrapper .inner {
+    margin-left: -100%
+}
+#slide3:checked~.slider_wrapper .inner {
+    margin-left: -200%
+}
+#slide4:checked~.slider_wrapper .inner {
+    margin-left: -300%
+}
+#slide5:checked~.slider_wrapper .inner {
+    margin-left: -400%
+}
+
